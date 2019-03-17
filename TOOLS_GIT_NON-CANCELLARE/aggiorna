@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+#
+# mtk: chiamate banali
+#
+#
+# aggiunge
+git add -A
+
+#precommento="$(git diff --name-only)"
+#precommento="$(git status --porcelain)"
+echo "$(git status --porcelain)"
+echo "Fornisci una descrizione e poi premi INVIO o RETURN"
+read commento
+
+# commit
+git commit -m "$commento"
+
+# push remoto al repo centrale
+git push origin master
+
